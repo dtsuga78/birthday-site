@@ -167,3 +167,103 @@ button:hover {
   opacity: 1;
   pointer-events: all;
 }
+
+/* -------------------- Password Modal -------------------- */
+
+/* Overlay */
+#pwOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 9999;
+  opacity: 0;
+  animation: fadeInOverlay 0.5s forwards;
+}
+
+/* Modal box */
+#pwModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background: #fff;
+  padding: 25px 40px;
+  border-radius: 12px;
+  text-align: center;
+  z-index: 10000;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  opacity: 0;
+  animation: popInModal 0.5s forwards;
+}
+
+#siteContent {
+  visibility: visible;
+}
+
+/* Input & button */
+#pwModal input {
+  padding: 10px;
+  margin-top: 15px;
+  width: 200px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+#pwModal button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: #ff4b5c;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+#pwModal button:hover {
+  background: #ff1f3a;
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Error message */
+#pwModal p {
+  margin-top: 10px;
+}
+
+/* -------------------- Animations -------------------- */
+
+/* Fade-in overlay */
+@keyframes fadeInOverlay {
+  to { opacity: 1; }
+}
+
+/* Pop-in modal */
+@keyframes popInModal {
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Fade-out overlay */
+.fadeOutOverlay {
+  animation: fadeOutOverlayAnim 0.5s forwards;
+}
+
+@keyframes fadeOutOverlayAnim {
+  to { opacity: 0; }
+}
+
+/* Fade-out modal */
+.fadeOut {
+  animation: fadeOutModal 0.5s forwards;
+}
+
+@keyframes fadeOutModal {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
