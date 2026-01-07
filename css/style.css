@@ -6,7 +6,6 @@
 
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #ffe6eb, #fff);
     color: #333;
     line-height: 1.6;
 }
@@ -267,3 +266,48 @@ button:hover {
   }
 }
 
+body.page-home {
+  background: linear-gradient(135deg, #ffe6f0, #fff);
+}
+
+body.page-message {
+  background: #fff7e6;
+}
+
+body.page-memories {
+  background: linear-gradient(135deg, #f0f4ff, #ffffff);
+}
+
+body.page-gallery {
+  background: #ffffff;
+}
+
+body.page-surprise {
+  background: radial-gradient(circle, #111, #000);
+  color: white;
+}
+
+.side-menu a.active {
+  background: #ff4b5c;
+  color: white;
+}
+
+body {
+  animation: fadePage 0.4s ease;
+}
+
+@keyframes fadePage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.site-footer {
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 14px;
+  opacity: 0.6;
+}
