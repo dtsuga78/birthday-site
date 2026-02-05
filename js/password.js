@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.createElement("div");
   modal.id = "pwModal";
   modal.innerHTML = `
-    <h2>Enter Birthday Code</h2>
+    <h2>Enter Code to entet the page  (hint: HBD)</h2>
     <input type="password" id="pwInput" placeholder="Enter code"/>
     <button id="pwSubmit">Unlock</button>
     <p id="pwError" style="color:red;display:none;">Wrong code! Try again.</p>
